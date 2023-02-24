@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.main-title{
+  background: var(--primary);
+  padding: 18px;
+  border-radius: 5px;
+  filter: drop-shadow(2px 4px 6px black);
+}

@@ -2,7 +2,7 @@ import './ContactUs.css'
 export default function ContactUs() {
   return (
     <>
-      <h1>Contact Us</h1>
+      <h1 className='main-title'>Contact Us</h1>
       <div className="contact-us">
         <form >
           <input type="text" placeholder="Enter You'r Name" />

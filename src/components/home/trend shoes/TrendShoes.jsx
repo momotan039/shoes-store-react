@@ -17,7 +17,7 @@ export default function TrendShoes({shoes}) {
 
   return (
     <>
-        <h1>Trend Shoes</h1>
+        <h1 className='main-title'>Trend Shoes</h1>
         <div className="trend-shoes">
         {
             getRandomShoes(3).map((s,i)=>{

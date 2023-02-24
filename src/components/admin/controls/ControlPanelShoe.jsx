@@ -4,7 +4,6 @@ import './controlPanelShoe.css'
 export default function ControlPanelShoe({formDataObj,btnText,btnClick}) {
    
     const changeData=(e)=>{
-        debugger
         const{name,value}=e.target
         formDataObj.set({...formDataObj.value,[name]:value})
       }
@@ -25,7 +24,7 @@ export default function ControlPanelShoe({formDataObj,btnText,btnClick}) {
 
         <div className="row">
           <h3>Description:</h3>
-          <input  name="price"  type="text" onChange={changeData} value={formDataObj.value.description} placeholder='Enter here the description' />
+          <textarea  name="description"  type="text" onChange={changeData} value={formDataObj.value.description} placeholder='Enter here the description' />
         </div>
 
 

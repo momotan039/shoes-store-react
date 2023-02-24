@@ -5,11 +5,14 @@ import  './Shoes.css'
 export default function Shoes() {
 
   const shoes=SHOES
-    return <div className="shoes">
+    return <>
+    <h1 className='main-title'>Gallery  Shoes</h1>
+    <div className="shoes">
         {
          shoes.map((s,i)=>{
           return <Shoe data={s} key={i}/>
       })
         }
     </div>
+    </>
 }

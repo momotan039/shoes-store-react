@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--back);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,8 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --primary:#646cff;
-  --secondry:#535bf2;
+  --back:#1e2f43;
+  --secondry:#FC5185;
+  --primary:#3FC1C9;
+
 }
 
 a {
@@ -25,8 +27,6 @@ a {
 a:hover {
   color: var(--secondry);
 }
-
-
 
 h1 {
   font-size: 3.2em;
@@ -70,6 +70,6 @@ button:focus-visible {
   display: flex;
   place-items: center;
   justify-content: center;
-  min-width: 320px;
+  /* min-width: 320px; */
   min-height: 100vh;
 }

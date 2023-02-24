@@ -34,6 +34,7 @@ export default function ManageShoes() {
                     <tr>
                         <th>Title</th>
                         <th>Price</th>
+                        <th>Description</th>
                         <th>image</th>
                         <th>Operation</th>
                     </tr>
@@ -44,6 +45,7 @@ export default function ManageShoes() {
                             return <tr key={i}>
                                 <td>{s.name}</td>
                                 <td>{s.price}$</td>
+                                <td><textarea disabled>{s.description}</textarea></td>
                                 <td><img width={100} src={s.image} /></td>
                                 <td>
                                     
