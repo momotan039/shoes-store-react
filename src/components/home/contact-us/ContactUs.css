@@ -1,0 +1,19 @@
+.contact-us{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-us form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+.contact-us form input,
+.contact-us form textarea{
+    padding: 13px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+}

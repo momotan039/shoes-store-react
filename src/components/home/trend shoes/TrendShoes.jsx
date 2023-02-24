@@ -12,7 +12,6 @@ export default function TrendShoes({shoes}) {
                 len--
             }
         }
-        debugger
         return selectedShoes
     }
 
