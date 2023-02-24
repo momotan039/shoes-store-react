@@ -1,0 +1,36 @@
+#shoe-detials{
+    background-color: rgba(2, 19, 41, 0.403);
+    border-radius: 10px;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+#shoe-detials .image{
+    max-width: 400px;
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+#shoe-detials .detials{
+    padding-left: 10px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#shoe-detials .detials .title{
+    background-color:var(--primary) ;
+    padding: 10px;
+    margin: 0;
+}
+#shoe-detials .detials span{
+    color: var(--secondry);
+}
+
+#shoe-detials .detials .buttons{
+    text-align: center;
+}
