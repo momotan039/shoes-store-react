@@ -9,7 +9,7 @@
 }
 .manage-shoes table td{
     font-weight: bold;
-    background-color: var(--secondry);
+    background-color: var(--back);
 }
 .manage-shoes table td textarea{ 
     width: 96%;
@@ -17,7 +17,7 @@
     resize: none;
 }
 .manage-shoes table th{
-    background-color: var(--primary);
+    background-color: var(--secondry);
 }
 
 .showbtn a{

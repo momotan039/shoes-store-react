@@ -2,11 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    height: 560px;
 }
 
 .control-panel-shoe .image{
     width: 400px;
-    height: 443px;
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-color: #535bf2;

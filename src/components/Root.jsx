@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { Outlet} from "react-router-dom";
 import { DeleteShoe, getShoes } from "../utils/crud.mjs";
 import { rootRefs } from "../utils/local.mjs";
+import Footer from "./footer/Footer.jsx";
 import Header from "./header/Header";
 import GridSpinner from "./spinner/GridSpinner.jsx";
 
@@ -26,6 +27,7 @@ export default function Root() {
          <>
          <Header/>
          <Outlet />
+         <Footer/>
        </>
       : 
         <GridSpinner/>

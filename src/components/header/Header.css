@@ -1,5 +1,8 @@
 header {
     margin-bottom: 20px;
+    background: var(--back);
+    padding: 18px;
+    border-radius: 8px;
 }
 
 header nav {

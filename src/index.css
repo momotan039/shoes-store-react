@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: var(--back);
+  background-color: var(--main-back);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+  --main-back:rgba(2, 19, 41, 0.403);
   --back:#1e2f43;
   --secondry:#FC5185;
   --primary:#3FC1C9;

@@ -9,7 +9,7 @@ export default function ControlPanelShoe({formDataObj,btnText,btnClick}) {
       }
 
   return (
-    <div className="control-panel-shoe center">
+    <div className="control-panel-shoe">
       <div className="image" style={{ backgroundImage: `url(${formDataObj.value.image})` }}></div>
       <div className="detials">
         <div className="row">
@@ -24,7 +24,7 @@ export default function ControlPanelShoe({formDataObj,btnText,btnClick}) {
 
         <div className="row">
           <h3>Description:</h3>
-          <textarea  name="description"  type="text" onChange={changeData} value={formDataObj.value.description} placeholder='Enter here the description' />
+          <textarea  name="description"  type="text" onChange={changeData} defaultValue={formDataObj.value.description} placeholder='Enter here the description' />
         </div>
 
 

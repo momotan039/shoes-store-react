@@ -45,7 +45,7 @@ export default function ManageShoes() {
                             return <tr key={i}>
                                 <td>{s.name}</td>
                                 <td>{s.price}$</td>
-                                <td><textarea disabled>{s.description}</textarea></td>
+                                <td><textarea defaultValue={s.description} disabled></textarea></td>
                                 <td><img width={100} src={s.image} /></td>
                                 <td>
                                     

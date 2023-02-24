@@ -37,6 +37,7 @@ export default function AddShoe() {
    {
     isAdding&&<GridSpinner/>
    }
+    <h1 className="main-title">Add New Shoe</h1>
      <ControlPanelShoe formDataObj={{set:setFormData,value:formData}} btnClick={addShoe} btnText='Add' />
    </>
   )
