@@ -3,10 +3,16 @@ header {
     background: var(--back);
     padding: 18px;
     border-radius: 8px;
+    display: flex;
+    height: 33px;
+    justify-content: space-around;
 }
-
+header *{
+    margin: 0;
+}
 header nav {
     display: flex;
+    gap: 23px;
 }
 
 header nav a {
@@ -21,7 +27,7 @@ header nav a::after {
     width: 0%;
     height: 5px;
     border-radius: 5px;
-    background-color: var(--primary);
+    background-color: var(--secondry);
     left: 0;
     bottom: -3px;
     transition: all .5s cubic-bezier(1, 0, 0, 1);
@@ -37,4 +43,9 @@ header nav a.active {
 
 header nav a.active::after {
 width: 100%;
+}
+
+header .user{
+    display: flex;
+    gap: 11px;
 }
