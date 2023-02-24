@@ -1,0 +1,22 @@
+.manage-shoes table th,
+.manage-shoes table td{
+    border: solid;
+    padding: 5px;
+}
+.manage-shoes table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.manage-shoes table td{
+    font-weight: bold;
+    background-color: #1a1a1a;
+}
+.manage-shoes table th{
+    background-color: var(--secondry);
+}
+.showbtn{
+    vertical-align: middle;
+}
+.showbtn a{
+    color: white;
+}
