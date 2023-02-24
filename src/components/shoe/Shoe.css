@@ -43,3 +43,16 @@
     border-radius: 10px 0 0 10px;
     color: white;
 } */
+
+@media (max-width:768px) {
+    .shoe{
+        width: 48%;
+    }
+}
+
+
+@media (max-width:480px) {
+    .shoe{
+        width: 100%;
+    }
+}

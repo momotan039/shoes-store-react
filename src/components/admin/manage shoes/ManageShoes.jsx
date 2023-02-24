@@ -1,8 +1,8 @@
 import {  useState } from 'react'
 import { Link} from 'react-router-dom'
-import {  DeleteShoe, SHOES } from '../../utils/crud.mjs'
-import { rootRefs } from '../../utils/local.mjs'
-import GridSpinner from '../spinner/GridSpinner.jsx'
+import {  DeleteShoe, SHOES } from '../../../utils/crud.mjs'
+import { rootRefs } from '../../../utils/local.mjs'
+import GridSpinner from '../../spinner/GridSpinner.jsx'
 import { FaEdit, FaTrashAlt } from 'react-icons/fa'
 import{MdPreview} from 'react-icons/md'
 import './ManageShoes.css'
@@ -47,11 +47,12 @@ export default function ManageShoes() {
                                 <td>{s.price}$</td>
                                 <td><textarea defaultValue={s.description} disabled></textarea></td>
                                 <td><img width={100} src={s.image} /></td>
-                                <td>
-                                    
+                                <td >
+                                    <div className="controls">
                                     <button className='showbtn'><Link state={s} to={`/shoe-details/${s.name}`}><MdPreview size={30}/></Link></button>
                                     <button><Link state={s} to={'/admin-dashboard/edit'}><FaEdit size={30}/></Link></button>
                                     <button onClick={() => deleteMe(s.id)}><FaTrashAlt size={30} color='red'/></button>
+                                    </div>
                                 </td>
                             </tr>
                         })

@@ -1,3 +1,6 @@
+.manage-shoes{
+    margin-top: 20px;
+}
 .manage-shoes table th,
 .manage-shoes table td{
     border: solid;
@@ -10,11 +13,18 @@
 .manage-shoes table td{
     font-weight: bold;
     background-color: var(--back);
+    height: 74px;
 }
 .manage-shoes table td textarea{ 
     width: 96%;
     height: 65px;
     resize: none;
+}
+.manage-shoes table td .controls{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    height: 100%;
 }
 .manage-shoes table th{
     background-color: var(--secondry);
@@ -22,4 +32,16 @@
 
 .showbtn a{
     color: white;
+}
+
+@media (max-width:992px) {
+    .manage-shoes table thead{
+        display: none;
+    }
+    .manage-shoes table tr{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 26px;
+    }
 }
