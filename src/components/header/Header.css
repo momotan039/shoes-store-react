@@ -1,0 +1,37 @@
+header {
+    margin-bottom: 20px;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    margin-right: 10px;
+    position: relative;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+header nav a::after {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--primary);
+    left: 0;
+    bottom: -3px;
+    transition: all .5s cubic-bezier(1, 0, 0, 1);
+}
+
+header nav a.active {
+    padding: 0 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    scale: 1.2;
+}
+
+header nav a.active::after {
+width: 100%;
+}
