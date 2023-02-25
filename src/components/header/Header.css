@@ -6,6 +6,7 @@ header {
     display: flex;
     height: 33px;
     justify-content: space-around;
+    align-items: center;
 }
 header *{
     margin: 0;
@@ -51,6 +52,7 @@ header .btn-mobile-menu{
 
 header .user{
     display: flex;
+    align-items: center;
     gap: 11px;
 }
 

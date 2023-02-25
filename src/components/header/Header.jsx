@@ -22,8 +22,8 @@ export default function Header() {
             <MobileNav isShow={showMobileNav} showMe={setShowMobileNav}/>
             <div className="user">
                 <h3>Hi {rootRefs.currentUser.name}</h3>
-                <button><Link to={'/cart'}><FiShoppingCart/></Link></button>
-                <button onClick={()=>rootRefs.logOut()}><FiLogOut/></button>
+                <Link to={'/cart'}><button><FiShoppingCart/></button></Link>
+                <Link to={'/cart'}><button onClick={()=>rootRefs.logOut()}><FiLogOut/></button></Link>
             </div>
         </header>
     )

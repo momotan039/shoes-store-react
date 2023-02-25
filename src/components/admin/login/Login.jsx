@@ -1,9 +1,9 @@
-import { Users } from '../../../utils/local.mjs'
+import { saveUserinLocalStoarge, Users } from '../../../utils/local.mjs'
 import './Login.css'
 export default function Login({setUser}) {
     const loginUser=(i)=>{
         setUser(Users[i])
-        localStorage.setItem('user',JSON.stringify(Users[i]))
+        saveUserinLocalStoarge(Users[i])
     }
   return (
     <div id='login-container' className="center">

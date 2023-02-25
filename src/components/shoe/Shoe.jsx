@@ -9,7 +9,7 @@ export default function Shoe({ data, cartOption }) {
   };
   return (
     <div className="shoe">
-      <Link state={data} to={"/shoe-details/" + data.name}>
+      <Link to={"/shoe-details/" + data.name}>
         <h3 className="title">{data.name}</h3>
         <img src={data.image} />
         <h3 className="price">

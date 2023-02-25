@@ -4,3 +4,12 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.cart .checkout-btn{
+    margin-top: 50px;
+    font-size: 30px;
+    padding: 30px;
+    background: var(--back);
+    width: 70%;
+    min-width: 300px;
+}

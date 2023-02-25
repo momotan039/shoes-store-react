@@ -1,9 +1,18 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useLocation, useParams } from 'react-router-dom'
+import { SHOES } from '../../utils/crud.mjs'
+import { rootRefs, saveUserinLocalStoarge } from '../../utils/local.mjs'
 import './ShoeDetails.css'
 export default function ShoeDeitals() {
-    const location = useLocation()
-    const dataShoe = location.state
+    const params = useParams()
+    const dataShoe = SHOES.find(f=>f.name===params.name)
+    const [isInCart,setIsInCart]=useState(rootRefs.currentUser.inCart.includes(dataShoe.id))
+    const addMeToCart=()=>{
+        const user=rootRefs.currentUser
+        user.inCart.push(dataShoe.id)
+        saveUserinLocalStoarge(user)
+        setIsInCart(true)
+    }
     return (
          <div className='enable-scal'  id='shoe-detials'>
             <div className='image' style={{ backgroundImage: `url(${dataShoe.image})` }} />
@@ -14,7 +23,9 @@ export default function ShoeDeitals() {
                 <h4>describe shoe:<span>{dataShoe.description}</span></h4>
                </div>
                <div className="buttons">
-                    <button>Buy Now</button>
+                {
+                  !isInCart?<button onClick={addMeToCart}>Buy Now</button>:<h2>This product already exist in cart</h2>
+                }
                </div>
             </div>
         </div>
