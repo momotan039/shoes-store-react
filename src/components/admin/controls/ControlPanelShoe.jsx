@@ -33,7 +33,7 @@ export default function ControlPanelShoe({formDataObj,btnText,btnClick}) {
         <input name="image" type="text"   onChange={changeData} value={formDataObj.value.image} placeholder='Enter here the image'/>
         </div>
 
-        <div className="contorls">
+        <div className="controls">
           <Link to='/admin-dashboard/manage-shoes'><button>Close</button></Link>
           <button onClick={btnClick}>{btnText}</button>
         </div>

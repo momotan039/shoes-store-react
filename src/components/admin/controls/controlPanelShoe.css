@@ -44,6 +44,18 @@
     resize: none;
     height: 200px;
 }
+.control-panel-shoe  .controls{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.control-panel-shoe  .controls button:nth-child(1){
+    background: var(--secondry);
+}
+.control-panel-shoe  .controls button:nth-child(2){
+    background: var(--primary);
+}
 
 @media (max-width:903px) {
     .control-panel-shoe{
