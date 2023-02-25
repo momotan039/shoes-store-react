@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './controlPanelShoe.css'
 export default function ControlPanelShoe({formDataObj,btnText,btnClick}) {
-   
     const changeData=(e)=>{
         const{name,value}=e.target
         formDataObj.set({...formDataObj.value,[name]:value})

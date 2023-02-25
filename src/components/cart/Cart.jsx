@@ -3,7 +3,7 @@ import { SHOES } from '../../utils/crud.mjs'
 import Shoe from '../shoe/Shoe'
 import './Cart.css'
 import { FaShoppingBag } from 'react-icons/fa'
-import { rootRefs, saveUserinLocalStoarge } from '../../utils/local.mjs'
+import { POPUP, rootRefs, saveUserinLocalStoarge } from '../../utils/local.mjs'
 export default function Cart() {
     const user=rootRefs.currentUser
     const getShoes = () => {
@@ -27,7 +27,10 @@ export default function Cart() {
         user.inCart=[]
         saveUserinLocalStoarge(user)
         setSelectedShoes(getShoes())
-        alert("purchase completed successfully")
+        POPUP.show({
+            message:"purchase completed successfully",
+            showIcon:true
+        })
     }
 
     const [selectedShoes, setSelectedShoes] = useState(getShoes())

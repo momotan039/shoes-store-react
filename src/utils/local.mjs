@@ -3,7 +3,28 @@ import AdminDashboard from "../components/admin/dashboard/AdminDashboard"
 export const rootRefs={
     reCallData:undefined,
     currentUser:undefined,
-    logOut:undefined
+    logOut:undefined,
+}
+
+export const POPUP={
+    setShow:undefined,
+    setMessage:undefined,
+    setShowIcon:undefined,
+    setShowComplete:undefined,
+    clickedComplete:false,
+    show:async function (option){
+        this.option=option
+        this.setShow(true)
+        this.setMessage(option.message)
+        this.setShowIcon(option.showIcon)
+        this.setShowComplete(option.showComplete)
+    },
+    complete:function(){
+        POPUP.setShow(false)
+        POPUP.clickedComplete=true
+        debugger
+        POPUP.option.onComplete()
+    }
 }
 
 export const  Users=[
@@ -18,6 +39,21 @@ export const  Users=[
         inCart:[]
     }
 ]
+
+
+export const isALLFilled=(formData)=>{
+    if(!formData.name)
+    return false
+    if(!formData.price)
+    return false
+    if(!formData.description)
+    return false
+    if(!formData.image)
+    return false
+    return true
+  }
+
+
 
 export function isLogginUser(){
     const user=JSON.parse(localStorage.getItem('user'))

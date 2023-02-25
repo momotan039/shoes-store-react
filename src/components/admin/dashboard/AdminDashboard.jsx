@@ -10,11 +10,11 @@ export default function AdminDashboard() {
     <>
       <div className="controls-admin-dashboard">
       <Link to="/admin-dashboard/manage-shoes">
-        <button>Show All Games</button>
+        <button>Show All Shoes</button>
       </Link>
 
       <Link to="/admin-dashboard/add">
-        <button>Add new game</button>
+        <button>Add New Shoe</button>
       </Link>
       </div>
       

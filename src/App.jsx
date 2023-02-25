@@ -14,6 +14,7 @@ import {  isLogginUser, rootRefs, Users } from './utils/local.mjs'
 import Footer from './components/footer/Footer'
 import GridSpinner from './components/spinner/GridSpinner'
 import Cart from './components/cart/Cart'
+import PopUp from './components/popup/PopUp'
 
 function App() {
   const [logginUser,setLogginUser]=useState(isLogginUser())
@@ -90,6 +91,8 @@ function App() {
         <Footer/>
         </>
       }
+
+      <PopUp/>
     </div>
   )
 }

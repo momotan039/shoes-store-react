@@ -18,9 +18,9 @@ export default function ManageShoes() {
 
         setIsDeleting(true)
         await DeleteShoe(id)
-        const gms = await rootRefs.reCallData()
+        const shs = await rootRefs.reCallData()
         setIsDeleting(false)
-        setShoes(gms)
+        setShoes(shs)
     }
 
    
