@@ -13,15 +13,14 @@ import { useEffect, useState } from 'react'
 import {  isLogginUser, rootRefs, Users } from './utils/local.mjs'
 import Footer from './components/footer/Footer'
 import GridSpinner from './components/spinner/GridSpinner'
+import Cart from './components/cart/Cart'
 
 function App() {
-  debugger
   const [logginUser,setLogginUser]=useState(isLogginUser())
   rootRefs.logOut=()=>{
     localStorage.removeItem('user')
     setLogginUser(undefined)
   }
-  debugger
   const router=buildTheRouter()
   useEffect(()=>{
     rootRefs.currentUser=logginUser
@@ -40,6 +39,10 @@ function App() {
             {
               path:'/store',
               element:<Shoes/>
+            },
+            {
+              path:'/cart',
+              element:<Cart/>
             },
             {
               path:'/shoe-details/:name',

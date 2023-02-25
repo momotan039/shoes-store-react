@@ -27,7 +27,13 @@
     border-radius: 0 0 20px 20px;
     margin: 0;
 }
-
+.shoe .removeBtn{
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    border-radius: 0 10px 5px 0;
+    background: var(--back);
+}
 
 /* .shoe .year{
     position: absolute;

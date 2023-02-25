@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import  './Header.css'
-import { NavLink } from 'react-router-dom'
-import {FiLogOut, FiMenu} from 'react-icons/fi'
+import { Link, NavLink } from 'react-router-dom'
+import {FiLogOut, FiMenu, FiShoppingCart} from 'react-icons/fi'
 import MobileNav from '../mobile nav/MobileNav'
 import { rootRefs } from '../../utils/local.mjs'
 export default function Header() {
@@ -22,6 +22,7 @@ export default function Header() {
             <MobileNav isShow={showMobileNav} showMe={setShowMobileNav}/>
             <div className="user">
                 <h3>Hi {rootRefs.currentUser.name}</h3>
+                <button><Link to={'/cart'}><FiShoppingCart/></Link></button>
                 <button onClick={()=>rootRefs.logOut()}><FiLogOut/></button>
             </div>
         </header>

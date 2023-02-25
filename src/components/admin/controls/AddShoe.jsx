@@ -20,7 +20,6 @@ export default function AddShoe() {
   }
   const addShoe=async()=>{
     //Check if all inputs are filled
-    debugger
     if(!isALLFilled())
     return
     const res = confirm("do you want to complete");
