@@ -8,9 +8,26 @@ import ManageShoes from './components/admin/manage shoes/ManageShoes'
 import EditShoe from './components/admin/controls/EditShoe'
 import AddShoe from './components/admin/controls/AddShoe'
 import ShoeDeitals from './components/details Shoe/ShoeDetails'
+import Login from './components/admin/login/Login'
+import { useEffect, useState } from 'react'
+import {  isLogginUser, rootRefs, Users } from './utils/local.mjs'
+import Footer from './components/footer/Footer'
 
 function App() {
-  const router=createBrowserRouter([
+  debugger
+  const [logginUser,setLogginUser]=useState(isLogginUser())
+  rootRefs.logOut=()=>{
+    localStorage.removeItem('user')
+    setLogginUser(undefined)
+  }
+  debugger
+  const router=buildTheRouter()
+  useEffect(()=>{
+    rootRefs.currentUser=logginUser
+  })
+  
+ function buildTheRouter(){
+  const routs=[
       {
         path:'/',
         element:<Root/>,
@@ -24,24 +41,6 @@ function App() {
               element:<Shoes/>
             },
             {
-              path:'/admin-dashboard',
-              element:<AdminDashboard/>,
-              children:[
-                {
-                  path: "manage-shoes",
-                  element: <ManageShoes/>,
-                },
-                {
-                  path: "edit",
-                  element:<EditShoe/>,
-                },
-                {
-                  path: "add",
-                  element: <AddShoe />,
-                },
-              ]
-            },
-            {
               path:'/shoe-details/:name',
               element:<ShoeDeitals/>
             },
@@ -51,10 +50,42 @@ function App() {
         path:'*',
         element:(<h1>not found page 404</h1>)
       }
-  ])
+  ]
+
+  const manageRout={
+      path:'/admin-dashboard',
+      element:<AdminDashboard/>,
+      children:[
+        {
+          path: "manage-shoes",
+          element: <ManageShoes/>,
+        },
+        {
+          path: "edit",
+          element:<EditShoe/>,
+        },
+        {
+          path: "add",
+          element: <AddShoe />,
+        },
+      ]
+    }
+    
+    if(logginUser&&logginUser.isAdmin)
+  routs[0].children.push(manageRout)
+
+  return createBrowserRouter(routs)
+}
+
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      {
+        logginUser?<RouterProvider router={router} />:
+        <>
+        <Login setUser={setLogginUser} />
+        <Footer/>
+        </>
+      }
     </div>
   )
 }

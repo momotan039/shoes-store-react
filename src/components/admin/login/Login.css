@@ -1,0 +1,17 @@
+#login-container{
+    min-height: 86vh;
+}
+.login{
+    padding: 20px;
+    background: var(--back);
+    border-radius: 10px;
+}
+
+.login .row{
+    display: flex;
+    gap: 20px;
+}
+
+.login .row button:nth-child(1){
+    background: var(--secondry);
+}

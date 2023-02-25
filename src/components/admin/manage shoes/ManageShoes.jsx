@@ -25,7 +25,7 @@ export default function ManageShoes() {
 
    
     return (
-        <div className="manage-shoes">
+        <div className="manage-shoes enable-scal">
             {
                 isDeleting&&<GridSpinner/>
             }

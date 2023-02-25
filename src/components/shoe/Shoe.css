@@ -28,11 +28,7 @@
     margin: 0;
 }
 
-@keyframes scal-animation{
-    to{
-        scale: 1;
-    }
-}
+
 /* .shoe .year{
     position: absolute;
     bottom: 0;

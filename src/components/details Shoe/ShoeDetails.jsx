@@ -5,7 +5,7 @@ export default function ShoeDeitals() {
     const location = useLocation()
     const dataShoe = location.state
     return (
-         <div  id='shoe-detials'>
+         <div className='enable-scal'  id='shoe-detials'>
             <div className='image' style={{ backgroundImage: `url(${dataShoe.image})` }} />
             <div className="detials">
                <div className="text">

@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { rootRefs } from "../../utils/local.mjs";
 import './MobileNav.css'
 export default function MobileNav({showMe,isShow}) {
     const hideMe=()=>{
@@ -9,7 +10,10 @@ export default function MobileNav({showMe,isShow}) {
             <nav>
                 <NavLink onClick={hideMe} to='/'>Home</NavLink>
                 <NavLink onClick={hideMe} to='/store'>Store</NavLink>
-                <NavLink onClick={hideMe} to='/admin-dashboard'>Admin Dashboard</NavLink>
+                {
+                    rootRefs.currentUser.isAdmin&&
+                <NavLink  onClick={hideMe} to='/admin-dashboard'>Admin Dashboard</NavLink>
+                }
             </nav>
         </div>
     )

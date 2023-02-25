@@ -9,7 +9,7 @@ export default function ControlPanelShoe({formDataObj,btnText,btnClick}) {
       }
 
   return (
-    <div className="control-panel-shoe">
+    <div className="control-panel-shoe enable-scal">
       <div className="image" style={{ backgroundImage: `url(${formDataObj.value.image})` }}></div>
       <div className="detials">
         <div className="row">

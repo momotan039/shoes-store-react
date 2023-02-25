@@ -3,6 +3,7 @@ import  './Header.css'
 import { NavLink } from 'react-router-dom'
 import {FiLogOut, FiMenu} from 'react-icons/fi'
 import MobileNav from '../mobile nav/MobileNav'
+import { rootRefs } from '../../utils/local.mjs'
 export default function Header() {
     const[showMobileNav,setShowMobileNav]=useState(false)
 
@@ -13,12 +14,15 @@ export default function Header() {
             <nav className='menu'>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/store'>Store</NavLink>
+                {
+                    rootRefs.currentUser.isAdmin&&
                 <NavLink to='/admin-dashboard'>Admin Dashboard</NavLink>
+                }
             </nav>
             <MobileNav isShow={showMobileNav} showMe={setShowMobileNav}/>
             <div className="user">
-                <h3>hello User</h3>
-                <button><FiLogOut/></button>
+                <h3>Hi {rootRefs.currentUser.name}</h3>
+                <button onClick={()=>rootRefs.logOut()}><FiLogOut/></button>
             </div>
         </header>
     )
