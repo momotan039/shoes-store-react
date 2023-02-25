@@ -2,16 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    height: 560px;
 }
 
 .control-panel-shoe .image{
     width: 400px;
-    height: 100%;
+    height: 558px;
     background-size: cover;
     background-position: center;
     background-color: #535bf2;
     border-radius: 10px;
+
 }
 
 .control-panel-shoe .detials {
@@ -43,4 +43,15 @@
 .control-panel-shoe .detials textarea{
     resize: none;
     height: 200px;
+}
+
+@media (max-width:903px) {
+    .control-panel-shoe{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .control-panel-shoe .image{
+        width: 100%;
+    }
 }
