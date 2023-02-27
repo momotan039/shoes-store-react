@@ -7,11 +7,18 @@ export default function ShoeDeitals() {
     const params = useParams()
     const dataShoe = SHOES.find(f=>f.name===params.name)
     const [isInCart,setIsInCart]=useState(rootRefs.currentUser.inCart.includes(dataShoe.id))
+    const [addedtoCart,setAddedToCart]=useState(false)
     const addMeToCart=()=>{
         const user=rootRefs.currentUser
         user.inCart.push(dataShoe.id)
         saveUserinLocalStoarge(user)
         setIsInCart(true)
+        setAddedToCart(true)
+    }
+    const getAppropriateMessag=()=>{
+        if(addedtoCart &&isInCart)
+        return"Added To Cart"
+        return"This product already exist in cart"
     }
     return (
          <div className='enable-scal'  id='shoe-detials'>
@@ -24,7 +31,8 @@ export default function ShoeDeitals() {
                </div>
                <div className="buttons">
                 {
-                  !isInCart?<button onClick={addMeToCart}>Buy Now</button>:<h2>This product already exist in cart</h2>
+                  isInCart?<h2>{getAppropriateMessag()}</h2>
+                  :<button onClick={addMeToCart}>Buy Now</button>
                 }
                </div>
             </div>
